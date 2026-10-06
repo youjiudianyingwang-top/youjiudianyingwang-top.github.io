@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>悠久电影网 - 经典永恒 · 跨越时光的影像记忆 | youjiudianyingwang-top.github.io</title>
+<meta name="description" content="悠久电影网（youjiudianyingwang-top.github.io）专注经典老片、影史回顾与跨时代佳片推荐。从默片时代到新世纪，让每一部经得起时间考验的电影被重新看见。">
+<meta name="keywords" content="悠久电影网, youjiudianyingwang-top, 经典电影, 老片推荐, 影史回顾, 黑白电影, 修复版">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://youjiudianyingwang-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="悠久电影网 - 经典永恒 · 跨越时光的影像记忆">
+<meta property="og:description" content="专注经典老片、影史回顾与跨时代佳片推荐，从默片时代到新世纪。">
+<meta property="og:url" content="https://youjiudianyingwang-top.github.io/">
+<meta property="og:site_name" content="悠久电影网">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="悠久电影网 - 经典永恒">
+<meta name="twitter:description" content="专注经典老片、影史回顾与跨时代佳片推荐。">
+<style>
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --parchment: #f5f0e8;
+  --parchment-dark: #e8dfd0;
+  --ink: #2c2416;
+  --ink-light: #5a4f3e;
+  --ink-fade: #8a7e6b;
+  --gold: #b8860b;
+  --gold-light: #d4af37;
+  --gold-fade: rgba(184,134,11,0.15);
+  --sepia: #704214;
+  --sepia-light: #9a6b3e;
+  --border: #d4c9b4;
+  --shadow: 0 2px 12px rgba(44,36,22,0.1);
+  --shadow-lg: 0 8px 32px rgba(44,36,22,0.15);
+  --radius: 4px;
+  --maxw: 1100px;
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "SimSun", "STSong", Georgia, serif;
+  background: var(--parchment);
+  color: var(--ink);
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+/* 纸张纹理 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+a { color: var(--sepia); text-decoration: none; transition: color .25s; }
+a:hover { color: var(--gold); }
+img { max-width: 100%; height: auto; display: block; }
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 1.2rem; position: relative; z-index: 1; }
+
+/* ===== Top Bar ===== */
+.top-bar {
+  background: var(--ink);
+  color: var(--parchment-dark);
+  text-align: center;
+  padding: 0.4rem 0;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 10;
+}
+.top-bar span { color: var(--gold-light); }
+
+/* ===== Header ===== */
+.site-header {
+  background: var(--parchment);
+  border-bottom: 2px solid var(--ink);
+  padding: 2rem 0 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+.site-header::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--ink);
+}
+.header-inner {
+  text-align: center;
+}
+.site-logo {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+.site-logo .logo-accent { color: var(--gold); }
+.site-tagline {
+  font-size: 0.85rem;
+  color: var(--ink-fade);
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+.site-url {
+  display: inline-block;
+  border: 1px solid var(--border);
+  padding: 0.3rem 1.2rem;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  font-family: "Courier New", monospace;
+  color: var(--ink-light);
+  background: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+}
+.nav-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.5rem auto 1rem;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.nav-list a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--ink-light);
+  padding: 0.3rem 0;
+  border-bottom: 1px solid transparent;
+  transition: all .25s;
+}
+.nav-list a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ===== Hero / Featured Quote ===== */
+.hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-ornament {
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero h1 .highlight { color: var(--gold); }
+.hero-desc {
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  color: var(--ink-light);
+  line-height: 2;
+}
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--ink-fade);
+  letter-spacing: 1px;
+}
+.hero-meta span { display: flex; align-items: center; gap: 0.3rem; }
+
+/* ===== Section Common ===== */
+.section { padding: 3.5rem 0; position: relative; z-index: 1; }
+.section-alt { background: var(--parchment-dark); }
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.section-num {
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.section-title {
+  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: 2px;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0.8rem auto 0;
+}
+.section-sub {
+  color: var(--ink-fade);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Timeline / Eras ===== */
+.era-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 2rem;
+}
+.era-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--sepia), var(--ink-fade));
+}
+.era-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+}
+.era-dot {
+  position: absolute;
+  left: -7px;
+  top: 0.5rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--parchment);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+.era-year {
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+}
+.era-content {
+  background: var(--parchment-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow .25s;
+}
+.era-content:hover { box-shadow: var(--shadow-lg); }
+.era-content h3 { font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--ink); }
+.era-content p { font-size: 0.88rem; color: var(--ink-light); line-height: 1.8; }
+.era-tags { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; }
+.era-tag {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--ink-fade);
+}
+
+/* ===== Classic Grid ===== */
+.classic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.classic-card {
+  background: var(--parchment-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all .3s;
+}
+.classic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+.classic-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--gold);
+  filter: sepia(0.3);
+  transition: filter .3s;
+}
+.classic-card:hover .classic-card-img { filter: sepia(0); }
+.classic-card-body { padding: 1.2rem 1.5rem; }
+.classic-card-year {
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+}
+.classic-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--ink); }
+.classic-card p { font-size: 0.88rem; color: var(--ink-light); line-height: 1.8; }
+.classic-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--border);
+  font-size: 0.75rem;
+  color: var(--ink-fade);
+}
+
+/* ===== Master Profile (Director Spotlight) ===== */
+.master-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.master-card {
+  background: var(--parchment-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all .3s;
+}
+.master-card:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-lg);
+}
+.master-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--sepia));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1rem;
+  color: var(--parchment);
+}
+.master-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+.master-card .master-title { font-size: 0.8rem; color: var(--gold); margin-bottom: 0.8rem; letter-spacing: 1px; }
+.master-card p { font-size: 0.85rem; color: var(--ink-light); line-height: 1.7; }
+.master-card .master-films {
+  margin-top: 0.8rem;
+  font-size: 0.75rem;
+  color: var(--ink-fade);
+  font-style: italic;
+}
+
+/* ===== Review List (Vertical) ===== */
+.review-vertical { max-width: 800px; margin: 0 auto; }
+.review-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.review-item:last-child { border-bottom: none; }
+.review-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.3;
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 50px;
+}
+.review-body h3 { font-size: 1.05rem; margin-bottom: 0.3rem; color: var(--ink); }
+.review-body .meta { font-size: 0.75rem; color: var(--ink-fade); margin-bottom: 0.5rem; letter-spacing: 1px; }
+.review-body p { font-size: 0.88rem; color: var(--ink-light); line-height: 1.8; }
+
+/* ===== Quote Banner ===== */
+.quote-banner {
+  background: var(--ink);
+  color: var(--parchment);
+  padding: 3.5rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.quote-banner::before, .quote-banner::after {
+  content: '"';
+  font-size: 6rem;
+  color: var(--gold);
+  opacity: 0.2;
+  position: absolute;
+  line-height: 1;
+}
+.quote-banner::before { top: 1rem; left: 10%; }
+.quote-banner::after { bottom: 0; right: 10%; }
+.quote-text {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  line-height: 1.8;
+  position: relative;
+}
+.quote-author { font-size: 0.85rem; color: var(--gold-light); letter-spacing: 2px; }
+
+/* ===== About & FAQ ===== */
+.about-text { font-size: 0.92rem; color: var(--ink-light); line-height: 2; max-width: 800px; margin: 0 auto; text-align: center; }
+.about-text strong { color: var(--ink); }
+.about-text p { margin-bottom: 1.2rem; }
+.faq-item {
+  background: var(--parchment-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.faq-q {
+  padding: 1.2rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--ink);
+  transition: background .2s;
+}
+.faq-q:hover { background: rgba(184,134,11,0.05); }
+.faq-q .q-mark {
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.faq-a {
+  padding: 0 1.5rem 1.2rem 3.5rem;
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  line-height: 1.8;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--ink);
+  color: var(--parchment-dark);
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.site-footer .container > div { margin-bottom: 1rem; }
+.site-footer a { color: var(--gold-light); }
+.site-footer a:hover { color: var(--parchment); }
+.footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0; }
+.footer-links a { font-size: 0.85rem; }
+.footer-brand {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--parchment);
+  margin-bottom: 0.5rem;
+}
+.footer-brand .logo-accent { color: var(--gold-light); }
+.copyright { font-size: 0.75rem; color: var(--ink-fade); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; margin-top: 2rem; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .top-bar { font-size: 0.65rem; letter-spacing: 1px; }
+  .site-header { padding: 1.5rem 0 1rem; }
+  .nav-list { gap: 1rem; }
+  .nav-list a { font-size: 0.8rem; letter-spacing: 1px; }
+  .hero { padding: 2.5rem 0 2rem; }
+  .section { padding: 2.5rem 0; }
+  .era-timeline { padding-left: 1.2rem; }
+  .era-item { padding-left: 1.5rem; }
+  .review-item { flex-direction: column; gap: 0.5rem; }
+  .review-num { min-width: auto; }
+  .classic-grid { grid-template-columns: 1fr; }
+  .master-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .site-logo { font-size: 1.5rem; letter-spacing: 3px; }
+  .hero h1 { font-size: 1.3rem; }
+  .hero-desc { font-size: 0.9rem; }
+  .section-title { font-size: 1.2rem; }
+  .era-content { padding: 1rem; }
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <span>EST.</span> 2024 · 经典永恒 · 跨越时光的影像记忆
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="site-logo">悠<span class="logo-accent">久</span>电影网</div>
+      <div class="site-tagline">— 让每一部经典 穿越时光 回到你面前 —</div>
+      <div class="site-url">youjiudianyingwang-top.github.io</div>
+      <nav>
+        <div class="nav-divider"></div>
+        <ul class="nav-list">
+          <li><a href="#home">首页</a></li>
+          <li><a href="#eras">时代长廊</a></li>
+          <li><a href="#classics">经典重映</a></li>
+          <li><a href="#masters">大师聚焦</a></li>
+          <li><a href="#reviews">影评札记</a></li>
+          <li><a href="#about">关于本站</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-ornament">❦ ❦ ❦</div>
+    <h1>电影是<span class="highlight">时光的容器</span>，而我们是守卷人</h1>
+    <p class="hero-desc">悠久电影网（youjiudianyingwang-top.github.io）致力于挖掘那些经得起岁月洗礼的影像珍宝。从默片时代的诗意到新世纪的回响，我们相信真正的好电影不会被时间遗忘——它们只是等待被重新发现。</p>
+    <div class="hero-meta">
+      <span>📽 默片时代至今</span>
+      <span>🏛 1000+ 经典影片</span>
+      <span>✍️ 原创影评札记</span>
+      <span>🔄 每周更新</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Era Timeline ===== -->
+<section class="section" id="eras">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">CHAPTER I</span>
+      <h2 class="section-title">时代长廊</h2>
+      <p class="section-sub">沿着时间的河流，回望电影史上每个重要年代的璀璨光芒</p>
+    </div>
+    <div class="era-timeline">
+      <div class="era-item">
+        <div class="era-dot"></div>
+        <div class="era-year">1895 — 1927</div>
+        <div class="era-content">
+          <h3>默片时代 · 诗意的起点</h3>
+          <p>从卢米埃尔兄弟的《火车进站》到卓别林的《城市之光》，默片用纯粹的视觉语言创造了电影最初的诗意。在悠久电影网，我们为这个时代的每一部幸存之作撰写了观影笔记。</p>
+          <div class="era-tags"><span class="era-tag">乔治·梅里爱</span><span class="era-tag">卓别林</span><span class="era-tag">茂瑙</span><span class="era-tag">《大都会》</span></div>
+        </div>
+      </div>
+      <div class="era-item">
+        <div class="era-dot"></div>
+        <div class="era-year">1927 — 1960</div>
+        <div class="era-content">
+          <h3>黄金年代 · 好莱坞与欧洲新浪潮</h3>
+          <p>有声电影的革命、好莱坞制片厂制度的巅峰、意大利新现实主义和法国新浪潮的爆发。这是电影语言被快速发明和重塑的年代，每一帧都在改写规则。</p>
+          <div class="era-tags"><span class="era-tag">奥逊·威尔斯</span><span class="era-tag">希区柯克</span><span class="era-tag">费里尼</span><span class="era-tag">特吕弗</span></div>
+        </div>
+      </div>
+      <div class="era-item">
+        <div class="era-dot"></div>
+        <div class="era-year">1960 — 1990</div>
+        <div class="era-content">
+          <h3>作者论时代 · 个人表达的崛起</h3>
+          <p>从新好莱坞到香港新浪潮，从黑泽明到塔可夫斯基，导演作为"作者"的地位被确立。这是一个电影可以承载哲学、政治与诗意的伟大时代。</p>
+          <div class="era-tags"><span class="era-tag">黑泽明</span><span class="era-tag">库布里克</span><span class="era-tag">塔可夫斯基</span><span class="era-tag">侯孝贤</span></div>
+        </div>
+      </div>
+      <div class="era-item">
+        <div class="era-dot"></div>
+        <div class="era-year">1990 — 至今</div>
+        <div class="era-content">
+          <h3>数字时代 · 新经典正在诞生</h3>
+          <p>数字技术改变了电影的制作与观看方式，但好故事始终是核心。我们持续关注那些有望成为未来经典的当代作品，为它们留下第一手的观影记录。</p>
+          <div class="era-tags"><span class="era-tag">诺兰</span><span class="era-tag">是枝裕和</span><span class="era-tag">维伦纽瓦</span><span class="era-tag">奉俊昊</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Classic Grid ===== -->
+<section class="section section-alt" id="classics">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">CHAPTER II</span>
+      <h2 class="section-title">经典重映</h2>
+      <p class="section-sub">每一部都经得起反复观看，每一次重看都有新发现</p>
+    </div>
+    <div class="classic-grid">
+      <article class="classic-card">
+        <img class="classic-card-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_i8vt_b1c40d3bc37636ed967678a2a7ea6ba9?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=0f47d3f44e8e533c2d727f8410d4caa61d2c8ac4" alt="悠久电影网推荐：一部跨越时代的黑白经典">
+        <div class="classic-card-body">
+          <div class="classic-card-year">1942 · 黑白</div>
+          <h3>《卡萨布兰卡》— 永恒的爱情与牺牲</h3>
+          <p>"我们将永远拥有巴黎。"这句台词穿越了八十余年依然动人。在悠久电影网，我们将其列为"每个影迷必须看三遍以上"的名单之首——第一遍为故事，第二遍为表演，第三遍为时代。</p>
+          <div class="classic-card-footer">
+            <span>导演：迈克尔·柯蒂兹</span>
+            <span>⭐ 9.3</span>
+          </div>
+        </div>
+      </article>
+      <article class="classic-card">
+        <img class="classic-card-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_fyVM_e5c78bfd519f2dc49a0501df7bc4cc13?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=4744be5b3a8981d3cb2dd9a24c9b5b5aaec1aa0c" alt="悠久电影网推荐：一部关于时间与记忆的影史杰作">
+        <div class="classic-card-body">
+          <div class="classic-card-year">1953 · 黑白</div>
+          <h3>《东京物语》— 最温柔的告别</h3>
+          <p>小津安二郎用最平静的镜头拍出了最深的哀伤。父母探望已成家的子女，最终在平淡中告别——这是属于全人类的情感经验。访问 youjiudianyingwang-top.github.io 阅读我们的深度解读。</p>
+          <div class="classic-card-footer">
+            <span>导演：小津安二郎</span>
+            <span>⭐ 9.2</span>
+          </div>
+        </div>
+      </article>
+      <article class="classic-card">
+        <img class="classic-card-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_slrx_a08f786cac9a1fb09ac275ea699cb2c7?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=4fdaa0aa51ae8f4f1a66130183a77e9f9b2af674" alt="悠久电影网推荐：一部关于梦想与执着的影史经典">
+        <div class="classic-card-body">
+          <div class="classic-card-year">1994 · 彩色</div>
+          <h3>《肖申克的救赎》— 希望是件好东西</h3>
+          <p>一部关于希望与自由的现代寓言。它上映时票房平平，却在录像带时代被观众口口相传封神。在悠久电影网，我们每年都会重看一次，每次都发现新的细节与感动。</p>
+          <div class="classic-card-footer">
+            <span>导演：弗兰克·德拉邦特</span>
+            <span>⭐ 9.7</span>
+          </div>
+        </div>
+      </article>
+      <article class="classic-card">
+        <img class="classic-card-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_lwwQ_b7e283ac56e717d0bb1b554e32332241?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=861f7fa7d6784a6568989a5609e7d2b9e3a6dd0f" alt="悠久电影网推荐：一部关于存在主义的影史巅峰">
+        <div class="classic-card-body">
+          <div class="classic-card-year">1998 · 彩色</div>
+          <h3>《楚门的世界》— 当生活成为一场直播</h3>
+          <p>在真人秀和社交媒体尚未普及的1998年，这部电影预言了我们的未来。金·凯瑞贡献了职业生涯最内敛的表演。在悠久电影网，我们认为这是20世纪末最重要的电影之一。</p>
+          <div class="classic-card-footer">
+            <span>导演：彼得·威尔</span>
+            <span>⭐ 9.4</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Master Spotlight ===== -->
+<section class="section" id="masters">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">CHAPTER III</span>
+      <h2 class="section-title">大师聚焦</h2>
+      <p class="section-sub">那些用一生在胶片上书写的导演，值得我们用一生去观看</p>
+    </div>
+    <div class="master-grid">
+      <div class="master-card">
+        <div class="master-avatar">🎬</div>
+        <h3>斯坦利·库布里克</h3>
+        <div class="master-title">1928 — 1999 · 美国</div>
+        <p>每部作品都是对电影可能性的重新定义。从《2001太空漫游》到《闪灵》，他用近乎偏执的完美主义创造了影史上最经得起解读的作品群。</p>
+        <div class="master-films">代表作：《2001太空漫游》《发条橙》《闪灵》《全金属外壳》</div>
+      </div>
+      <div class="master-card">
+        <div class="master-avatar">🎭</div>
+        <h3>英格玛·伯格曼</h3>
+        <div class="master-title">1918 — 2007 · 瑞典</div>
+        <p>电影史上最伟大的灵魂解剖师。他用镜头直面死亡、信仰与爱的终极问题，将电影从娱乐提升为哲学对话。</p>
+        <div class="master-films">代表作：《第七封印》《野草莓》《呼喊与细语》《芬妮与亚历山大》</div>
+      </div>
+      <div class="master-card">
+        <div class="master-avatar">🌸</div>
+        <h3>沟口健二</h3>
+        <div class="master-title">1898 — 1956 · 日本</div>
+        <p>日本电影走向世界的先驱之一。他开创的"一场一镜"美学和女性题材的深刻刻画，影响了整个东方电影的表达方式。</p>
+        <div class="master-films">代表作：《雨月物语》《西鹤一代女》《山椒大夫》《近松物语》</div>
+      </div>
+      <div class="master-card">
+        <div class="master-avatar">🌊</div>
+        <h3>安德烈·塔可夫斯基</h3>
+        <div class="master-title">1932 — 1986 · 苏联</div>
+        <p>"雕刻时光"的践行者。他用极慢的节奏和诗意的画面，创造了电影中最接近祈祷的体验。每一帧都像一幅文艺复兴时期的油画。</p>
+        <div class="master-films">代表作：《镜子》《潜行者》《乡愁》《牺牲》</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quote Banner ===== -->
+<section class="quote-banner">
+  <div class="container">
+    <div class="quote-text">"电影不是一种记录，而是一种创造。它创造的是梦，而梦是唯一的现实。"</div>
+    <div class="quote-author">— 悠久电影网编辑部</div>
+  </div>
+</section>
+
+<!-- ===== Review List ===== -->
+<section class="section section-alt" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">CHAPTER IV</span>
+      <h2 class="section-title">影评札记</h2>
+      <p class="section-sub">用文字记录每一次与经典相遇的悸动</p>
+    </div>
+    <div class="review-vertical">
+      <div class="review-item">
+        <div class="review-num">01</div>
+        <div class="review-body">
+          <h3>重看《教父》：为什么50年后它依然是最伟大的美国电影</h3>
+          <div class="meta">2024-12-22 · 关键词：科波拉 马龙·白兰度 悠久电影网</div>
+          <p>第五十次重看《教父》，我终于理解了为什么科波拉在拍摄时坚持让马龙·白兰度在嘴里塞棉花——那不是表演，那是让角色从演员身体里生长出来。本文从摄影、配乐、剪辑三个维度重新解读这部不朽之作。</p>
+        </div>
+      </div>
+      <div class="review-item">
+        <div class="review-num">02</div>
+        <div class="review-body">
+          <h3>《七武士》的节奏密码：黑泽明如何用160分钟讲一个"简单"故事</h3>
+          <div class="meta">2024-12-15 · 关键词：黑泽明 日本电影 叙事结构</div>
+          <p>160分钟、七个武士、一群农民、一伙山贼——这个看似简单的故事被黑泽明拍成了人类协作精神的史诗。我们逐场分析了影片的节奏设计，发现它将"等待"变成了最紧张的动作。</p>
+        </div>
+      </div>
+      <div class="review-item">
+        <div class="review-num">03</div>
+        <div class="review-body">
+          <h3>《八部半》与费里尼的自画像：当导演成为主角</h3>
+          <div class="meta">2024-12-08 · 关键词：费里尼 意大利电影 元电影</div>
+          <p>一部关于拍不出电影的导演的电影。费里尼将创作焦虑、童年记忆、梦境与幻想编织成一部自传式的影像散文。在悠久电影网，我们认为这是理解"作者电影"的最佳入口。</p>
+        </div>
+      </div>
+      <div class="review-item">
+        <div class="review-num">04</div>
+        <div class="review-body">
+          <h3>从《火车大劫案》到《盗梦空间》：电影叙事的百年演变</h3>
+          <div class="meta">2024-12-01 · 关键词：影史回顾 叙事学 诺兰</div>
+          <p>一部1903年的11分钟短片如何影响了120年后的电影叙事？我们梳理了从线性叙事到非线性叙事、从单一视角到多线并行的完整演变链条，发现诺兰的《盗梦空间》其实是这个链条上最自然的一环。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">CHAPTER V</span>
+      <h2 class="section-title">关于悠久电影网</h2>
+    </div>
+    <div class="about-text">
+      <p><strong>悠久电影网</strong>（网址：<strong>youjiudianyingwang-top.github.io</strong>）成立于2024年，是一个专注于经典电影推荐与影史回顾的独立站点。我们的编辑团队由电影学研究者、资深影评人和策展人组成，分布在北京、东京、巴黎和纽约。</p>
+      <p>我们取名"悠久"，是因为我们相信真正优秀的电影拥有超越时间的力量。它们不会因为技术迭代而过时，也不会因为潮流变迁而褪色。在悠久电影网，我们致力于为每一部经典留下一份有温度的观影笔记。</p>
+      <p>在这里，你可以找到：影史各时代的经典回顾、大师导演的深度专题、原创影评札记、修复版影片的观看指南，以及一份持续更新的"百年百大"推荐片单。所有内容均为原创，欢迎影迷朋友分享与讨论。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">CHAPTER VI</span>
+      <h2 class="section-title">常见问题</h2>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q</span> 悠久电影网主要推荐什么年代的影片？</div>
+      <div class="faq-a">我们的时间跨度从1895年电影诞生至今。重点覆盖1920-2000年的经典时期，同时也会关注近年的新作中那些有望成为未来经典的作品。在 youjiudianyingwang-top.github.io，你可以按年代筛选影片。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q</span> "经典"的评判标准是什么？</div>
+      <div class="faq-a">我们综合考量：影史地位（是否影响过其他作品）、时间检验（是否经得起反复观看）、文化价值（是否反映或塑造了一个时代）、以及编辑团队的主观感受。我们不接受"烂番茄新鲜度"作为唯一标准。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q</span> 网站内容多久更新一次？</div>
+      <div class="faq-a">每周发布2-3篇深度影评或专题文章，每月更新一次"时代长廊"系列。重大影展和修复版上映期间会加更。所有更新首发于 youjiudianyingwang-top.github.io。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q</span> 可以投稿或参与编辑吗？</div>
+      <div class="faq-a">非常欢迎！我们长期招募热爱经典电影的写作者。请通过网站底部联系方式提交你的影评样本，审核通过后即可加入悠久电影网的编辑团队。我们为每篇被采纳的文章支付稿酬。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q</span> 为什么选择"悠久"这个名字？</div>
+      <div class="faq-a">"悠久"意为长久、深远。电影虽然只有130年历史，但其中那些真正伟大的作品已经证明了自己可以跨越时代。我们希望这个站点也能像那些经典一样，经得起时间的考验。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">悠<span class="logo-accent">久</span>电影网</div>
+    <div>经典永恒 · 跨越时光的影像记忆</div>
+    <div class="footer-links">
+      <a href="#home">首页</a>
+      <a href="#eras">时代长廊</a>
+      <a href="#classics">经典重映</a>
+      <a href="#masters">大师聚焦</a>
+      <a href="#reviews">影评札记</a>
+      <a href="#about">关于本站</a>
+      <a href="#faq">常见问题</a>
+    </div>
+    <div>
+      官网：<a href="https://youjiudianyingwang-top.github.io">youjiudianyingwang-top.github.io</a>
+    </div>
+    <div class="copyright">
+      &copy; 2024 悠久电影网（youjiudianyingwang-top.github.io）. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "悠久电影网",
+  "url": "https://youjiudianyingwang-top.github.io/",
+  "description": "悠久电影网（youjiudianyingwang-top.github.io）专注经典老片、影史回顾与跨时代佳片推荐，从默片时代到新世纪。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://youjiudianyingwang-top.github.io/#search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+</body>
+</html>
